@@ -1,0 +1,7 @@
+Feature: About Us page from footer
+  Scenario: Open About Us page from footer
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    And I click footer link "About Us"
+    Then I expect page contains text "About Us"

@@ -1,0 +1,7 @@
+Feature: Blog page from header
+  Scenario: Open Blog page from header menu
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    And I click header menu "Blog"
+    Then I expect current url contains "blog"

@@ -1,0 +1,6 @@
+Feature: Home hero content on Kwiga
+  Scenario: Homepage shows main value proposition
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    Then I expect page contains text "All tools for a successful business"

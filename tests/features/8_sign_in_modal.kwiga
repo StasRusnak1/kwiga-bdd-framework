@@ -1,0 +1,7 @@
+Feature: Sign in modal
+  Scenario: Clicking Sign in opens login page
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    And I click css ".header__login_long"
+    Then I expect page contains text "Login or register"

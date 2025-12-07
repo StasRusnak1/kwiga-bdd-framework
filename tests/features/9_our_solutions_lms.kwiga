@@ -1,0 +1,7 @@
+Feature: Our Solutions LMS navigation
+  Scenario: Clicking LMS card opens LMS page
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    And I click css "a[title='LMS']"
+    Then I expect page contains text "Learning Management System (LMS)"

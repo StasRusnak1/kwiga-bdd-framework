@@ -1,0 +1,7 @@
+Feature: Testimonials block shows Olga Mikhalchuk review
+  Scenario: Homepage contains testimonial from Olga Mikhalchuk
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    Then I expect page contains text "Olga Mikhalchuk"
+    And I expect page contains text "HR Generalist at Omni-Med"

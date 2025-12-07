@@ -1,0 +1,8 @@
+Feature: Pricing page from header
+  Scenario: Open Pricing page from header menu
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    And I click css ".header__open-menu"
+    And I click header menu "Prices"
+    Then I expect current url contains "pricing"

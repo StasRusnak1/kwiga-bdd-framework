@@ -1,0 +1,7 @@
+Feature: Terms of use from footer
+  Scenario: Open Terms of use page from footer
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    And I click footer link "Terms and Conditions"
+    Then I expect page contains text "PLEASE STUDY THIS DOCUMENT ATTENTIVELY."

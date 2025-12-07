@@ -1,0 +1,9 @@
+Feature: Navigate to List of courses from header menu
+  Scenario: Open List of courses via Useful info dropdown
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    And I click css ".header__open-menu"
+    And I click header dropdown "Useful info"
+    And I click css "a[title='List of courses']"
+    Then I expect current url contains "unlock.kwiga.com"

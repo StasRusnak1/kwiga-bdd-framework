@@ -1,0 +1,7 @@
+Feature: Course search Powered 2025 on Kwiga catalog
+  Scenario: Search Powered 2025 course by keyword
+    Given app baseUrl "https://unlock.kwiga.com/ua"
+    And browser "chrome" headless true
+    When I open "home"
+    And I search course "Powered 2025"
+    Then I expect results contain title "Powered 2025: рік з ШІ"

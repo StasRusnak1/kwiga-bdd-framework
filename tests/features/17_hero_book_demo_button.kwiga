@@ -1,0 +1,8 @@
+Feature: Book a demo CTA from hero
+  Scenario: Clicking Book a demo opens booking page in new tab
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    And I click button "Book a demo"
+    And I switch to new tab
+    Then I expect current url contains "calendly.com"

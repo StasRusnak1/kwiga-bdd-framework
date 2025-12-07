@@ -1,0 +1,7 @@
+Feature: Header navigation to LMS page
+  Scenario: Clicking LMS in header opens LMS page
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    And I click header menu "LMS"
+    Then I expect page contains text "Learning Management System (LMS)"

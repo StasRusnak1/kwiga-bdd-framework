@@ -1,0 +1,7 @@
+Feature: Language switch on Kwiga
+  Scenario: Switch site language from English to Ukrainian
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    And I switch language to "uk"
+    Then I expect page language is "uk"

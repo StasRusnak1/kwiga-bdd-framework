@@ -1,0 +1,7 @@
+Feature: Course search on Kwiga
+  Scenario: Search course by keyword
+    Given app baseUrl "https://unlock.kwiga.com/ua"
+    And browser "chrome" headless true
+    When I open "home"
+    And I search course "Move Education"
+    Then I expect results contain title "Move Education"

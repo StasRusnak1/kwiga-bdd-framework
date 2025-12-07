@@ -1,0 +1,8 @@
+Feature: Stats block on homepage
+  Scenario: Homepage shows key business metrics
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    Then I expect page contains text "20M+ USD"
+    And I expect page contains text "600,000+"
+    And I expect page contains text "projects"

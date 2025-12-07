@@ -1,0 +1,8 @@
+Feature: Language switch from English to Ukrainian and back
+  Scenario: Switch to Ukrainian and back to English
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    And I switch language to "uk"
+    And I switch language to "en"
+    Then I expect page language is "en"

@@ -1,0 +1,8 @@
+Feature: Logo navigation to homepage
+  Scenario: Clicking logo from inner page returns to homepage
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    And I click header menu "LMS"
+    And I click css ".header__logo"
+    Then I expect current url contains "kwiga.com"

@@ -1,0 +1,7 @@
+Feature: Start now CTA leads to login
+  Scenario: Clicking Start now opens login/register page
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    And I click css ".public_btn"
+    Then I expect page contains text "Login or register"

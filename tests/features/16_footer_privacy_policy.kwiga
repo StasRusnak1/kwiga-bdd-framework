@@ -1,0 +1,7 @@
+Feature: Privacy Policy from footer
+  Scenario: Open Privacy Policy page from footer
+    Given app baseUrl "https://kwiga.com"
+    And browser "chrome" headless true
+    When I open "home"
+    And I click footer link "Privacy Policy"
+    Then I expect page contains text "Privacy Policy"
